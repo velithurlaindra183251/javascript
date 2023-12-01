@@ -1,0 +1,267 @@
+.navbar 
+{
+    display: flex;
+    background-color: chocolate;
+    border-radius: 50px;
+}
+
+.nav li{
+    text-decoration: none;
+    float: left;
+    list-style-type: none;
+    padding: 10px 10px;
+    margin: 50px 50px;
+}
+
+.nav li a {
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.navbar ul {
+    overflow: auto;
+}
+
+.search{
+    float: right;
+    color: whitesmoke;
+}
+
+
+
+
+.heardersection{
+    background-color: darkturquoise;
+}
+
+.profile {
+    color: hotpink;
+}
+
+.listprojects{
+    display:inline-block;
+}
+
+span{
+    display: contents;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#projects{
+    background-color: chocolate;
+
+}
+
+.listtitle{
+    align-items: center;
+display: grid;
+grid-template-columns: repeat(5,2fr);
+gap: 30px;
+padding-bottom: 30px;
+margin-top: 20px;
+justify-content: space-between;
+flex-direction: column;
+}
+
+.listtitle .listtitle{
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: large;
+}
+
+html{
+    scroll-behavior: auto;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(140, 0, 80);
+    font-size: 20px;
+}
+
+.clm{
+    float: left;
+    padding: 30px;
+}
+
+.projectname{
+    height: 50px;
+    width: 50px;
+}
+
+.container{
+    width: 100%;
+    background-color: gray;
+}
+
+.skillset{
+    text-align: right;
+    color: coral;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.html{
+    width: 85;
+    background-color: crimson;
+}
+
+.css{
+    width: 75;
+    background-color: cyan;
+}
+
+.javascript{
+    width: 65%;
+    background-color: greenyellow;
+}
+
+.bootstrap{
+    width: 50%;
+    background-color: violet;
+}
+
+.reactjs{
+    width: 50;
+    background-color: tomato;
+}
+
+.nodejs{
+    width: 45%;
+    background-color: springgreen;
+}
+
+.github{
+    width: 40%;
+    background-color: burlywood;
+}
+
+.git{
+    width: 40%;
+    background-color: cadetblue;
+}
+
+p{
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+h1{
+    color: rgb(140, 0, 80);
+}
+
+h2{
+    color:black ;
+}
+
+.text{
+    color: black;
+    font-size: 20px;
+}
+
+
+.heading{
+    background-color: chartreuse;
+    border-radius: 20px;
+    color: darkblue;
+}
+
+.checkbtn{
+    font-size: 50px;
+    color: aquamarine;
+    float: right;
+    line-height: 70px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+@media(max-width:970px){
+    label.logo{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media(max-width:850px){
+    .checkbtn{
+        display: block;
+    }
+}
+
+
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 70px;
+    left: 100;
+    text-align: center;
+    transition: all .5s;
+}
+
+
+
+a:hover,a.active{
+    background: none;
+    color: blue;
+}
+
+#check:checked{
+    left: 0;
+}
+
+section{
+    background: url(Snapchat-1223190070.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh -70p); 
+}
+
+
+label.logo{
+    color: white;
+    font-size: 40px;
+    line-height: 70px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+
+
+a.active,a:hover{
+    background: blueviolet;
+}
+
+.heading{
+    background-color: lawngreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

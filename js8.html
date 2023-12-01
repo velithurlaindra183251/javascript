@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="js8.js"></script>
+  <script></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inconsolata', 'sans-sedif';
+      background: #2a364f;
+      display: grid;
+      place-items: center;
+    }
+
+    .main-div {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: azure;
+    }
+
+    h1 {
+      color: blanchedalmond;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: inline-block;
+      background: #f8b627;
+      color: #f4f4f4;
+      font-size: 16px;
+      font-weight: normal;
+      width: 130px;
+      text-align: center;
+      border-radius: 3px;
+      transition: 400ms;
+      text-decoration: none;
+      padding: 10px 22px;
+      z-index: 100000;
+      outline: none;
+      border: none;
+    }
+
+    p {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-div">
+    <div class="child-one">
+      <p>I am Child One</p>
+    </div>
+    <div class="child-two">
+      <p>I am Child Two</p>
+    </div>
+    <div class="child-three">
+      <p>I am Child Three</p>
+    </div>
+  </div>
+
+  <p class="para">This is a Mango</p>
+  <p class="para">This is a Banana</p>
+  <p>This is a Kiwi</p>
+  <h1 id="heading">Change the content of h1</h1>
+
+  <!-- <button onclick="changeContent()">Click Me</button>
+  <script>
+    function changeContent() {
+      const headingchange = document.getElementById('heading');
+      headingchange.innerHTML = 'welcome to JavaSceipt';
+      console.log(document.getElementsByClassName('para'));
+      console.log(document.getElementsByTagName('p'));
+    }
+  </script> -->
+  <form action="">
+    <label for="">Male</label>
+    <input type="radio" name="Gender">
+    <label for="">Female</label>
+    <input type="radio" name="Gender">
+    <label for="">Others</label>
+    <input type="radio" name="Gender">
+  </form>
+  <br>
+  <button onclick="changecontent()">Click Me</button>
+  <script>
+    function changeContent() {
+      console.log(document.getElementsByName('Gender'));
+      document.querySelector('#heading').innerHTML =
+        //console.log(document.getElementsByClassName('para'));
+      console.log(document.querySelector('para'));
+    }
+  </script>
+
+  <ul>
+    <li id="web-id">React</li>
+    <li>HTML</li>
+    <li class="web-class">CSS</li>
+    <li class="web-class">JavaSceipt</li>
+  </ul>
+  <script>
+    console.log(document.getElementById('web-id').innerHTML);
+    console.log(document.querySelector('web-id').innerHTML);
+  
+    console.log(document.querySelector('ul li.web-id').innerHTML);
+    console.log(document.querySelector('li.web-id').innerHTML);
+  </script>
+
+</body>
+
+</html>

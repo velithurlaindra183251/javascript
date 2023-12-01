@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js9.js"></script>
+    <script></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+             font-family: Arial, Helvetica, sans-serif;
+            background: #3a3a3a;
+        }
+h1 {
+    text-align: center;
+    color:rgba(250, 250, 250, 0.9);
+}
+        .button_container {
+            width: 180px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        .buttton-su {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 5px;
+            border-bottom: 40px;
+            box-shadow: 0px 10px 8px -8px rgba(0, 0, 0.6);
+        }
+
+        .su-button-circle {
+            background-color: aqua;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 0px;
+            height: 0px;
+            margin-top: 0px;
+            margin-left: 0px;
+            pointer-events: none;
+        }
+
+        .button-su-inner {
+            display: inline-block;
+            background-color: aqua;
+            color: coral;
+            font-size: 15px;
+            font-weight: normal;
+            width: 140px;
+            text-align: center;
+            border-radius: 5px;
+            transition: none;
+            text-decoration: none;
+            padding: 25px;
+            z-index: 100000;
+        }
+
+        .button-text-container {
+            position: relative;
+            z-index: 10000 ;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  Events in JavaScript
+        4 Ways of Writing events in JS 
+        1: Using inline events alert();
+        2: By calling a function (We arlready seen and most common way of writing)
+        3: Using inline listness (addiventlistner and) -->
+
+    <div class="content">
+        <h1>Difference Events type in JavaScript</h1>
+        <div class="button_container">
+            <div class="button-su">
+                <span class="su-button-circle"></span>
+                <a href="#" class="button-su-inner" onclick="alert('i am from inline event')">
+                <span class="button-text-container">Simple Inline alert ()</span>
+                </a>
+            </div>
+
+            <div class="button_container">
+                <div class="button-su">
+                    <span class="su-button-circle"></span>
+                    <a href="#" class="button-su-inner" onclick="callingfunction()">
+                    <span class="button-text-container">By Calling a Function </span>
+                    </a>
+                </div>
+
+                <div class="button-su">
+                    <span class="su-button-circle"></span>
+                    <a href="#" class="button-su-inner" >
+                    <span class="button-text-container" id="thirdway"> Inline Event </span>
+                    </a>
+                </div>
+        </div>
+    </div>
+    <script>
+        function callingfunction() {
+            alert('Most Common way of writing function');
+        } 
+
+        var thirdway = document.getElementById('thirdway');
+        thirdway.onclick = function(params) {
+            alert('Most Common way of writing function Again')
+        }
+        var fourthway = document.queryselector('#fourthway');
+    </script>
+</body>
+
+</html>

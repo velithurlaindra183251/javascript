@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chaset="UTF-8">
+    <meta http-eqciv="x-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.5">
+    <title>registation form</title>
+</head>
+<body>
+    <h2>Please Register to an account</h2>
+    <form id="registation" name="registation- form" action="/registation.aspx" method="post">
+        <table>
+            <tr>
+                <td><label for="fname">First Name:-</label></td>
+                <td><input type="text" id="Fname" name="fname" placeholder="First Name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="sname">Middle Name:-</label></td>
+                <td><input type="text" id="Middle name" name="Middlename" placeholder="Middle Name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="lname">Last Name:-</label></td>
+                <td><input type="text" id="Last name" name="Lastname" placeholder="Last Name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="fathername">Father Name:-</label></td>
+                <td><input type="text" id="Father name" name="Fathername" placeholder="Father Name"></td>
+            </tr>
+ 
+            <tr>
+                <td><label for="mothername">Mother Name:-</label></td>
+                <td><input type="text" id="Mother name" name="Mothername" placeholder="Mother Name"></td>
+            </tr>
+
+
+            <tr>
+                <td><label for="E-mail">E-Mail:-</label></td>
+                <td><input type="email" id="email" name="email" placeholder="E-Mail"></td>
+            </tr>
+
+            <tr>
+                <td><label for="Password">Password:-</label></td>
+                <td><input type="password" id="password" name="password" placeholder="Enter your password"></td>
+            </tr>
+
+            <tr>
+                <td><label for="cities">Please select your city</label></td>
+                <td>
+                    <select id="cities" name="cities">
+                        <option>please select</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="vijayawada">Vijayawada</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="vizag">Vizag</option>
+                        <option value="kadapa">Kadapa</option>
+                        <option value="chittore">Chittore</option>
+                        <option value="guntur">Guntur</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>      
+                <td><label for="Mobile">Mobile Nummber:-</label></td>
+                <td><input type="mobile" id="mobile" name="mobile" placeholder="Moblie Number"></td>
+            </tr>
+
+            <tr>
+                <td><label for="Date">Choose your birth:-</label></td>
+                <td><input type="date" id="date" name="date"></td>
+            </tr>
+
+            <tr>
+                <td><label for="gemder">Please specify your gender:-</label></td>
+                <td>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="male">
+
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" value="female">  
+ \                </td>
+            </tr>
+
+            <tr>
+                <td><label for="time">Choose a time to deliver:-</label></td>
+                <td><input type="time" id="time" name="time"></td>
+            </tr>
+
+            <tr>
+                <td><label for="vol">Please specify volume between 0 to 100:-</label></td>
+                <td><input type="range" id="vol" name="vol" min="0" max="100"></td>
+            </tr>
+
+            <tr>
+                <td><label for="Color">Choose your favorite color:-</label></td>
+                <td><input type="color" id="color" name="color" /></td>
+            </tr>
+
+            <tr>
+                <td><label for="File">Choose your Profile:-</label></td>
+                <td><input type="file" id="file" name="file" /></td>
+            </tr>
+
+            <tr>
+                <td><label for="education">Please select your education:-</label></td>
+                <td>
+                    <input type="checkbox" id="ssc" name="ssc" value="ssc">
+                    <label for="ssc">SSC</label>
+
+                    <input type="checkbox" id="intermediate" name="intermediate" value="intermediate">
+                    <label for="intermediate">Intermediate</label>
+
+                    <input type="checkbox" id="graduation" name="graduat      ion" value="graduation">
+                    <label for="graduation">Graduation</label>
+
+                    <input type="checkbox" id="post-graduation" name="post-graduation" value="post-graduation">
+                    <label for="post-graduation">Post-Graduation</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="url">Please specify your website:-</label></td>
+                <td><input type="url" id="url" name="url" placeholder="Enter your website"></td>
+            </tr>
+
+            <tr>
+                <td><label for="rabk">Please enter your Emcet rank:-</label></td>
+                <td><input type="number" id="rank" name="rank"/></td>
+            </tr>
+
+            <tr>
+                <td><label for="about">Enter the about yourself:-</label></td>
+                <td><textarea name="about" id="about" name="about" rows="10" cols="10"></textarea></td> 
+            </tr>
+
+            <td style="text-align: center">
+                <input type="reset" name="reset" value="reset signup form"/>
+            </td>
+
+            <td style="padding-top:35px;">
+                <input type="submit" name="registration" value="Sign in"/>
+            </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>          

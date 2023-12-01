@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js13.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #1ee170;
+        }
+
+        .counter-main-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .counter-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 2rem;
+        }
+
+        .counter-container i {
+            color: beige;
+        }
+
+        .counter {
+            color: rgb(255, 59, 229);
+            font-size: 40px;
+        }
+
+        span {
+            color: aliceblue;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter-main-container">
+        <div class="counter-container">
+            <i class="fas fa-mug-hot fa-3x"></i>
+            <div class="counter" data-traget="2000"></div>
+            <span>Project Completed</span>
+        </div>
+
+        <div class="counter-container">
+            <i class="fas fa-users fa-3x"></i>
+            <div class="counter" data-traget="10000"></div>
+            <span>Our Happy Clients</span>
+        </div>
+
+        <div class="counter-container">
+            <i class="fas fa-tasks fa-3x"></i>
+            <div class="counter" data-traget="800"></div>
+            <span>onGoing Projects</span>
+        </div>
+    </div>
+    <script>
+        var counters = document.querySelectorAll('.counter');
+        counters.forEach((counter) => {
+            //console.log(counter);
+            counter.innerHTML = 0;
+            function updateCounter() {
+                var targetCount = Number(counter.getAttribute('data-traget'));
+
+                var startingCount = Number(counter.innerHTML);
+                var incr = targetCount / 100;
+                if (startingCount < targetCount) {
+                    counter.innerHTML = Math.round(startingCount + incr);
+                    setTimeout(updateCounter, 10);
+                } else {
+                    counter.innerHTML = targetCount;
+                }
+            }
+            updateCounter();
+        });
+    </script>
+</body>
+
+</html>

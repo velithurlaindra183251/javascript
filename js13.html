@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="class_13.js"></script>
+    <style>
+      .parentDiv {
+        height: 500px;
+        width: 600px;
+        border: 10px solid green;
+        background-color: rgba(0, 255, 0, 0.5);
+        box-shadow: 0 10px 13px -10px rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .childDiv {
+        height: 200px;
+        width: 300px;
+        border: 10px solid rgb(77, 36, 36);
+        background-color: #db9191;
+        box-shadow: 0 10px 13px -10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv" id="parentId">
+      <div class="childDiv" id="childId"></div>
+    </div>
+    <script>
+      var parentId = document.getElementById('parentId');
+      var childId = document.getElementById('childId');
+
+      function parentCall() {
+        alert('Parent Div call');
+        console.log("Parent Div Call");
+      }
+      function childCall() {
+        alert('Child Div call');
+        console.log("Child Div Call");
+        //event.stopPropagation();
+      }
+
+      parentId.addEventListener('click', parentCall, true);
+      childId.addEventListener('click', childCall, true);
+    </script>
+  </body>
+</html>

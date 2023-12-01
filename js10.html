@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="class_10.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inconsolata', 'sans-sedif';
+        background: #2a364f;
+      }
+      /*
+      h1 {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .button_container {
+        width: 176px;
+        margin: 0 auto;
+        padding-top: 40px;
+      }
+      .button-su {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        border-radius: 3px;
+        margin-bottom: 30px;
+        box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.6);
+      }
+      .su-button-circle {
+        background-color: red;
+        border-radius: 1000px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        pointer-events: none;
+      }
+
+      .button-su-inner {
+        display: inline-block;
+        background-color: #f8b627;
+        color: #f4f4f4;
+        font-size: 16px;
+        font-weight: normal;
+        width: 132px;
+        text-align: center;
+        border-radius: 3px;
+        transition: none;
+        text-decoration: none;
+        padding: 22px;
+        z-index: 100000;
+      }
+
+      .button-text-container {
+        position: relative;
+        z-index: 10000;
+      }
+
+      .result-container {
+        color: seashell;
+        font-size: 25px;
+      } */
+      p,
+      label {
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+      }
+
+      .main-div {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      #box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+      }
+      .result-container {
+        color: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- //Event Object
+    is the parent object of the event object.
+    ex: MouseEvent, focusEvent, KeyBoardEvent etc., -->
+    <!-- <div class="content">
+      <h1>Lets see what is Event Object</h1>
+      <div class="button-container">
+        <div class="button-su">
+          <a href="#" class="button-su-inner" id="fourthWay">
+            <span class="button-text-container"> Event Listners </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var fourtway = document.getElementById('fourthWay');
+      function checkEvent() {
+        //alert('I am from event object');
+        console.log(event);
+        console.log(event.target);
+        console.log(event.type);
+      }
+
+      fourtway.addEventListener('click', checkEvent);
+    </script> -->
+
+    <!--  //Mouse Event
+    occur when the mouse interacts with the HTML document belongs to the MouseEvent Object -->
+    <!-- <p
+      id="myP"
+      onmousedown="mouseDown()"
+      onmouseup="mouseUp()"
+      onmouseover="mouseOver"
+    >
+      Click the text! The MouseDown() function is triggered
+    </p>
+
+    <script>
+      function mouseDown() {
+        document.getElementById('myP').style.color = '#F8B627';
+      }
+
+      function mouseUp() {
+        document.getElementById('myP').style.color = '#fff';
+      }
+
+      function mouseOver() {
+        document.getElementById('myP').style.color = '#fcf';
+      }
+    </script>
+
+    <div class="main-div">
+      <div id="box"></div>
+    </div>
+    <script>
+      var boxContainer = document.getElementById('box');
+      boxContainer.addEventListener('mouseenter', function () {
+        boxContainer.style.backgroundColor = 'aqua';
+      });
+
+      boxContainer.addEventListener('mouseleave', function () {
+        boxContainer.style.backgroundColor = 'pink';
+      });
+    </script> -->
+
+    <!-- //KeyBoardEvent
+    occur when user presses a key on the keyboard, belongs to the KeyBoardEvent object -->
+
+    <!-- <div class="main-div">
+      <div>
+        <p>
+          a function is triggered when the user is pressing a key in the input
+          field
+        </p>
+        <br />
+        <input
+          type="text"
+          class="position-1"
+          onkeypress="keyPress()"
+          onkeydown="keyDown()"
+          onkeyup="keyUp()"
+        />
+        <br />
+        <p id="keys"></p>
+      </div>
+    </div>
+    <script>
+      function keyPress() {
+        console.log(event);
+        console.log("keyPress");
+        var keyDetails =
+          'you pressed ' + event.key + ' and its code is ' + event.code;
+        document.getElementById('keys').innerHTML = keyDetails;
+      }
+
+      function keyDown() {
+        console.log("keyDown");
+        document.getElementById('keys').innerHTML = 'Key is Down';
+      }
+      function keyUp() {
+        console.log("keyUp");
+        document.getElementById('keys').innerHTML = 'Key is Up';
+      }
+    </script> -->
+
+    <!-- //InputEvents
+    the onChange event occurs when the value on an element has been changed -->
+
+    <div class="main-div">
+      <div>
+        <label for="">Your Name</label>
+        <input type="text" name="" id="cusName" />
+        <br />
+        <label
+          >Choose an ice cream flavour😋
+          <!-- <select id="iceCream" name="iceCream" onchange="selectFlavour()"> -->
+          <select id="iceCream" name="iceCream">
+            <option value="">Select One...</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="sardine">Sardine</option>
+            <option value="vanilla">Vanilla</option>
+          </select>
+        </label>
+        <br />
+        <br />
+        <div class="result-container" id="result"></div>
+      </div>
+    </div>
+    <script>
+      /* function selectFlavour() {
+        var cusName = document.getElementById('cusName').value;
+        var icream = document.getElementById('iceCream').value;
+        var result = document.getElementById('result');
+        result.innerHTML =
+          'Mr. ' + cusName + ' selected ' + icream + ' ice-cream flavour';
+      } */
+
+      var icreams = document.getElementById('iceCream');
+      icreams.addEventListener('change', function () {
+        var cusName = document.getElementById('cusName').value;
+        var icream = document.getElementById('iceCream').value;
+        var result = document.getElementById('result');
+        result.innerHTML =
+          'Mr. ' + cusName + ' selected ' + icream + ' ice-cream flavour';
+      });
+
+      var cusName = document.getElementById('cusName');
+      cusName.addEventListener('change', function () {
+        console.log(event.target.value);
+      });
+    </script>
+  </body>
